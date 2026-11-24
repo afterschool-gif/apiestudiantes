@@ -51,7 +51,9 @@ public class EstudianteController {
         Estudiante eBD = estudianteService.findById(id).get();
         eBD.setNombre(e.getNombre());
         eBD.setApellido(e.getApellido());
-        eBD.setEdad(e.getEdad());
+        eBD.setFechaNacimiento(e.getFechaNacimiento());
+        eBD.setNivel(e.getNivel());
+        eBD.setClase(e.getClase());
         return estudianteService.save(eBD);
     }
 }
